@@ -1,39 +1,309 @@
+
+<!-- 作業六在右下角"三角形"點擊3下後的地方 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 區塊鏈實作</title>
 <style>
-.btn {
+@charset "UTF-8";
+* {
+  position: relative;
+  font-family: 微軟正黑體;
+  vertical-align: top;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.phone {
+  width: 270px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  left: 0px;
+}
+
+.top {
+  height: 40px;
+}
+.top .camera {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.screen {
+  height: 440px;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.screen .pages {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0px;
+  transition: 0.5s;
+  left: 0;
+}
+.screen .pages .page {
+  background-color: #222;
+  font-size: initial;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  /*   框線體積會算在本體內 */
+  white-space: normal;
+  color: #eee;
+  font-size: 12px;
+  left: 0px;
+}
+.screen .pages .page p {
+  margin-top: 30px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+.screen .pages .page h2 {
+  color: #a3a19e;
+  font-size: 20px;
+  margin: 0;
+}
+.screen .pages .page:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: "";
+  display: block;
+  background-color: #92d9de;
+  width: 110%;
+  height: 50px;
+}
+.screen .pages .page:after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  display: block;
+  background-color: #92d9de;
+  width: 110%;
+  height: 30px;
+  margin: -10px;
+}
+.screen .page.page1 {
+  background-color: #92d9de;
+  color: white;
+}
+.screen .page.page1 h2 {
+  margin-top: 10px;
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+.screen .page.page1 h1 {
+  margin-top: 1px;
+  font-size: 18px;
+}
+.screen .page.page1 .pic1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #abdcf5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.screen .page.page1 .pic2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #bae6e2;
+  position: absolute;
+  left: 60%;
+  top: 70%;
+}
+.screen .page.page1 .pic3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #babfe6;
+  position: absolute;
+  left: 18%;
+  top: 67%;
+}
+
+.bottom {
+  height: 60px;
+}
+.bottom .button {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.bottom .button:hover {
+  background-color: #ddd;
+}
+.bottom .next {
+  border: solid 1px #f3f3f3;
+  color: rgba(0, 0, 0, 0.3);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.bottom .next:hover {
+  background-color: #ddd;
+}
+
+.gopaybtn {
   border: solid 1px;
-  margin: 10px;
-  border-radius: 5px;
+  margin-top: -4px;
+  border-radius: 10px;
   display: inline-block;
   padding: 10px 10px;
   cursor: pointer;
+  position: absolute;
+  right: 40%;
+}
+.gopaybtn:hover {
+  background-color: #f5e042;
+  color: #222;
+  font-weight: 900;
+}
+
+.Sender, .Receiver, .Cost {
+  position: relative;
+  margin: 20px 0px;
+  font-size: 15px;
 }
 </style>
 </head>
 <body translate="no">
-<div class="content">
-<h3>Payment</h3>
-<div class="pay_box">
-Sender:<div class="Sender"> <input type="text" name="sender" id="sen">
+<meta name="”viewport”" content="”width=device-width," initial-scale="1.0″" />
+<div class="phone">
+<div class="top">
+<div class="camera"></div>
 </div>
-Receiver:<div class="Receiver"> <input type="text" name="receiver" id="rev">
+<div class="screen">
+<div class="pages">
+<div class="page page1">
+<h2>首頁</h2>
+<h1>> 錢包介紹</h1>
+<div class="pic1"></div>
+<div class="pic2"></div>
+<div class="pic3"></div>
 </div>
-Cost:<div class="Cost"> <input type="text" name="Cost">
+<div class="page page2">
+<h2>登入/註冊</h2>
+<p>上半部註冊，下半部登入</p>
 </div>
-<div onclick="haha()" class="btn">GoPay!</div>
+<div class="page page3">
+<h2>個人帳戶資訊</h2>
+<p>查看餘額、經驗值</p>
+</div>
+<div class="page page4">
+<h2>轉帳</h2>
+<p>(顯示當筆交易明細)</p>
+<div class="Sender">Sender : &nbsp &nbsp &nbsp
+<input id="sen" type="text" name="sender" placeholder="ex : imucici" />
+</div>
+<div class="Receiver">Receiver : &nbsp &nbsp
+<input id="rev" type="text" name="receiver" placeholder="ex : imucici" />
+</div>
+<div class="Cost">Cost : &nbsp &nbsp &nbsp &nbsp &nbsp
+<input id="cost" type="text" name="Cost" placeholder="ex : 1" />
+</div>
+<div class="gopaybtn" onclick="pay()">GoPay !</div>
 </div>
 </div>
+</div>
+<div class="bottom">
+<div class="button">☐</div>
+<div class="next">▷ </div>
+</div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
 <script id="rendered-js">
-function haha(){
+// // // 加音效
+// // var button_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click14.wav");
+
+var screen_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click18.wav");
+
+var home_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click23.wav");
+
+
+
+var page=0;
+$(".next").click(function(){
+  page+=1;
+  if (page>3){
+    page=0;
+  }
+  $(".pages").css("left","-"+page*100+"%");
+  screen_audio.play();
+});
+
+$(".button").click(function(){
+  home_audio.play();
+  $(".pages").css("left","-"+0+"%");
+  
+});
+
+
+
+function pay(){
   var sen = document.getElementById('sen').value;
   var rev = document.getElementById('rev').value;
   var dataset = {'sen':sen,'rev':rev};
   console.log(dataset);
   alert(JSON.stringify(dataset));
 }
+
+
+// 按完GoPay!後輸入欄位資訊清空
+$(".gopaybtn").click(function(){
+  home_audio.play(),
+  $("#sen").val(""),
+  $("#rev").val(""),
+  $("#cost").val("")
+});
     </script>
 </body>
 </html>

@@ -290,12 +290,13 @@ function pay(){
 
 
 // 按完GoPay!後輸入欄位資訊清空
-// $(".gopaybtn").click(function(){
+$(".gopaybtn").click(function(){
 //   home_audio.play(),
-//   $("#sen").val(""),
-//   $("#rev").val(""),
-//   $("#cost").val("")
-// });
+  pay();
+  $("#sen").val(""),
+  $("#rev").val(""),
+  $("#cost").val("")
+});
     </script>
 </body>
 </html>

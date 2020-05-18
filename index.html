@@ -287,6 +287,20 @@ function pay(){
   var dataset = "{\"sen\":\"" + sen + "\", \"rev\":\"" + rev + "\", \"method\": \"2\", \"description\": \"Light token\", \"txn\":\"WI9ARLKNJTRJOXYTWZ9RPZEMDDXMPCD9TKOHNNFVSNBUKIJJQ9YQVCURRCZUNDKGKI9NZESCWTNI99999\"}";
   console.log(dataset);
 //   alert(JSON.stringify(dataset));
+  
+  $.ajax({
+      url: "http://3.87.137.58:8888/send_token",
+      type: 'POST',
+      dataType: 'json',
+      data: dataset,
+      success: function (result) {
+        alert(JSON.stringify(data));
+      },
+      error: function (error) {
+         alert("Cannot get data");
+      }
+  });
+  
 }
 
 

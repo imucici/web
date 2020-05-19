@@ -258,9 +258,9 @@ html, body {
 // // // 加音效
 // // var button_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click14.wav");
 
-var screen_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click18.wav");
+// var screen_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click18.wav");
 
-var home_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click23.wav");
+// var home_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click23.wav");
 
 
 
@@ -271,11 +271,11 @@ $(".next").click(function(){
     page=0;
   }
   $(".pages").css("left","-"+page*100+"%");
-  screen_audio.play();
+//   screen_audio.play();
 });
 
 $(".button").click(function(){
-  home_audio.play();
+//   home_audio.play();
   $(".pages").css("left","-"+0+"%");
   
 });
@@ -306,7 +306,7 @@ function pay(){
 
 // 按完GoPay!後輸入欄位資訊清空
 $(".gopaybtn").click(function(){
-  home_audio.play()
+//   home_audio.play()
   $("#sen").val(""),
   $("#rev").val(""),
   $("#cost").val("")

@@ -2,13 +2,15 @@
 
 <html lang="en">
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta charset="UTF-8">
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lobster&amp;display=swap'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lobster&amp;family=Signika&amp;display=swap'>
 <style>
 @charset "UTF-8";
 * {
   position: relative;
-  font-family: 微軟正黑體;
+  font-family: "Signika", sans-serif, 微軟正黑體;
   vertical-align: top;
 }
 
@@ -51,7 +53,6 @@ html, body {
   height: 440px;
   transition-duration: 0.5s;
   overflow: hidden;
-  cursor: pointer;
 }
 .screen .pages {
   width: 100%;
@@ -62,7 +63,7 @@ html, body {
   left: 0;
 }
 .screen .pages .page {
-  background-color: #222;
+  background-color: #1D678F;
   font-size: initial;
   display: inline-block;
   width: 100%;
@@ -77,14 +78,26 @@ html, body {
   left: 0px;
 }
 .screen .pages .page p {
-  margin-top: 30px;
+  margin-top: 10px;
   letter-spacing: 2px;
-  line-height: 20px;
+  line-height: 45px;
+  font-size: 50px;
+  color: #34b7eb;
+  left: 10px;
+  text-shadow: 0.1em 0.1em #f3f3f3;
+  font-weight: 900;
 }
 .screen .pages .page h2 {
+  text-align: center;
   color: #a3a19e;
   font-size: 20px;
   margin: 0;
+}
+.screen .pages .page h3 {
+  margin-bottom: -5px;
+  font-size: 30px;
+  color: #34b7eb;
+  text-shadow: 0.1em 0.1em #f3f3f3;
 }
 .screen .pages .page:before {
   position: absolute;
@@ -148,6 +161,28 @@ html, body {
   left: 18%;
   top: 67%;
 }
+.screen .page.page2 .icon1, .screen .page.page2 .icon2 {
+  position: absolute;
+  top: 65px;
+  width: 60px;
+  height: 60px;
+  color: #2f5cd6;
+  text-align: center;
+  font-size: 50px;
+  vertical-align: middle;
+  display: inline-block;
+  border: solid 3px #7fcce3;
+  background-color: #7fcce3;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  text-shadow: 0 0 0.1em #1D678F;
+}
+.screen .page.page2 .icon1 {
+  left: 70px;
+}
+.screen .page.page2 .icon2 {
+  right: 65px;
+}
 
 .bottom {
   height: 60px;
@@ -186,6 +221,38 @@ html, body {
   background-color: #ddd;
 }
 
+.signinbtn {
+  border: solid 1px;
+  bottom: 110px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 20%;
+}
+.signinbtn:hover {
+  background-color: #f5e042;
+  color: #222;
+  font-weight: 900;
+}
+
+.signupbtn {
+  border: solid 1px;
+  bottom: 110px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 20%;
+}
+.signupbtn:hover {
+  background-color: #f5e042;
+  color: #222;
+  font-weight: 900;
+}
+
 .gopaybtn {
   border: solid 1px;
   margin-top: -4px;
@@ -194,7 +261,7 @@ html, body {
   padding: 10px 10px;
   cursor: pointer;
   position: absolute;
-  right: 40%;
+  right: 36%;
 }
 .gopaybtn:hover {
   background-color: #f5e042;
@@ -207,10 +274,173 @@ html, body {
   margin: 20px 0px;
   font-size: 15px;
 }
+
+.Sender {
+  margin-top: 30px;
+}
+
+.UserName {
+  position: absolute;
+  top: 175px;
+  font-size: 15px;
+}
+
+.Password {
+  position: absolute;
+  top: 225px;
+  font-size: 15px;
+}
+
+.account {
+  width: 100px;
+  height: 100px;
+  border: solid 2px;
+  position: relative;
+  top: 70px;
+  left: 15px;
+  cursor: pointer;
+}
+
+#pic5 {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+#pic5 circle {
+  fill: #92d9de;
+  stroke: none;
+}
+#pic5 text {
+  fill: #f3f3f3;
+  stroke: none;
+  font-family: "Signika", sans-serif, 微軟正黑體;
+  font-size: 15px;
+  transition-delay: 0.5s;
+}
+#pic5 .frame_outer, #pic5 .frame_inner, #pic5 .neck, #pic5 .paltform {
+  transform: scale(0);
+  fill: #7a7671;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+#pic5 .screen_content {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+#pic5:hover .frame_outer, #pic5:hover .frame_inner {
+  fill: #7a7671;
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+#pic5:hover .neck, #pic5:hover .paltform {
+  fill: #694f24;
+  transform: scale(1);
+  transition-delay: 0s;
+}
+#pic5:hover .screen_content {
+  opacity: 1;
+  transition-delay: 1s;
+}
+#pic5:hover text {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+h4 {
+  color: #f3f3f3;
+  font-family: "Signika", sans-serif, 微軟正黑體;
+  font-size: 15px;
+  font-weight: 450;
+  position: absolute;
+  top: 58px;
+  left: 25px;
+  transition: 0.5s;
+}
+
+.Money {
+  width: 100px;
+  height: 100px;
+  border: solid 2px;
+  position: absolute;
+  top: 107px;
+  right: 21px;
+  cursor: pointer;
+}
+.Money .money {
+  top: 6px;
+  left: 15px;
+  width: 59px;
+  height: 59px;
+  border: solid 5px #f7e57c;
+  font-size: 88px;
+  color: #f7e57c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.Money .money:hover {
+  animation: money 5s infinite;
+  top: 11px;
+  left: 11px;
+  width: 70px;
+  height: 70px;
+}
+.Money .money:hover ~ h4 {
+  opacity: 0;
+  transition: 0.5s;
+}
+@-webkit-keyframes money {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Food {
+  width: 100px;
+  height: 100px;
+  border: solid 2px;
+  position: absolute;
+  bottom: 100px;
+  right: 78px;
+  cursor: pointer;
+}
+.Food .food {
+  top: 5px;
+  left: 14px;
+  width: 70px;
+  height: 70px;
+  font-size: 88px;
+  color: #8f703f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: solid 1px #1D678F;
+}
+.Food .food:hover ~ h4 {
+  opacity: 0;
+  transition: 0.5s;
+}
+.Food .food:hover {
+  animation: food 5s infinite;
+}
+@-webkit-keyframes food {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>
 </head>
 <body translate="no">
 <meta name="”viewport”" content="”width=device-width," initial-scale="1.0″" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <div class="phone">
 <div class="top">
 <div class="camera"></div>
@@ -218,30 +448,60 @@ html, body {
 <div class="screen">
 <div class="pages">
 <div class="page page1">
-<h2>首頁</h2>
-<h1>> 錢包介紹</h1>
+<h3>隨便</h3>
+<p>WALLET</p>
 <div class="pic1"></div>
 <div class="pic2"></div>
 <div class="pic3"></div>
 </div>
 <div class="page page2">
-<h2>登入/註冊</h2>
-<p>上半部註冊，下半部登入</p>
+<h2>登入 ・ 註冊
+<div class="icon1">B</div>
+<div class="icon2">P</div>
+</h2>
+<div class="UserName">🧑UserName : &nbsp &nbsp &nbsp
+<input id="userName" type="text" name="username" placeholder="ex : imucici" />
+</div>
+<div class="Password">🔒Password : &nbsp &nbsp &nbsp &nbsp
+<input id="password" type="text" name="password" placeholder="ex : 12345" />
+</div>
+<div class="signinbtn" onclick="signin()">signin ➜</div>
+<div class="signupbtn" onclick="signup()">signup ➜</div>
 </div>
 <div class="page page3">
-<h2>個人帳戶資訊</h2>
-<p>查看餘額、經驗值</p>
+<h2>今天想幹嘛</h2>
+<div class="account">
+<SVG id="pic5" viewbox="-50 -40 100 100">
+<rect class="frame_outer" x="-30" y="-20" width="60" height="40"></rect>
+<rect class="frame_inner" x="-25" y="-15" width="50" height="30"></rect>
+<rect class="neck" x="-2" y="20" width="4" height="10"></rect>
+<rect class="paltform" x="-10" y="30" width="20" height="5"></rect>
+<g class="screen_content">
+<line x1="-20" y1="0" x2="-8" y2="0"></line>
+<line x1="-20" y1="5" x2="-4" y2="5"></line>
+<circle cx="10" cy="0" r="7"></circle>
+</g>
+<text class="text" x="-28" y="53">我的帳戶</text>
+</SVG>
+</div>
+<div class="Money">
+<div class="money">$ </div>
+<h4> 轉 帳 $</h4>
+</div>
+<div class="Food">
+<div class="food"> 🍽</div>
+<h4>吃什麼 ? </h4>
+</div>
 </div>
 <div class="page page4">
-<h2>轉帳</h2>
-<p>(顯示當筆交易明細)</p>
-<div class="Sender">Sender : &nbsp &nbsp &nbsp
+<h2>轉帳(顯示當筆交易明細)</h2>
+<div class="Sender">Sender : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <input id="sen" type="text" name="sender" placeholder="ex : imucici" />
 </div>
-<div class="Receiver">Receiver : &nbsp &nbsp
+<div class="Receiver">Receiver : &nbsp &nbsp &nbsp &nbsp &nbsp
 <input id="rev" type="text" name="receiver" placeholder="ex : imucici" />
 </div>
-<div class="Cost">Cost : &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="Cost">Cost : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <input id="cost" type="text" name="Cost" placeholder="ex : 1" />
 </div>
 <div class="gopaybtn" onclick="pay()">GoPay !</div>
@@ -262,6 +522,7 @@ html, body {
 
 // var home_audio = new Audio("http://www.monoame.com./awi_class/ballsound/click23.wav");
 
+// var wiggle_audio = new Audio("http://www.monoame.com./awi_class/ballsound/phonevi.mp3");
 
 
 var page=0;
@@ -271,46 +532,53 @@ $(".next").click(function(){
     page=0;
   }
   $(".pages").css("left","-"+page*100+"%");
-//   screen_audio.play();
+  // screen_audio.play();
 });
 
 $(".button").click(function(){
-//   home_audio.play();
+  // home_audio.play();
   $(".pages").css("left","-"+0+"%");
   
 });
 
 
 function pay(){
-  var sen = document.getElementById('sen').value;
-  var rev = document.getElementById('rev').value;
-  var dataset = "{\"sen\":\"" + sen + "\", \"rev\":\"" + rev + "\", \"method\": \"2\", \"description\": \"Light token\", \"txn\":\"WI9ARLKNJTRJOXYTWZ9RPZEMDDXMPCD9TKOHNNFVSNBUKIJJQ9YQVCURRCZUNDKGKI9NZESCWTNI99999\"}";
-  console.log(dataset);
-//   alert(JSON.stringify(dataset));
+  
+  var sen = document.getElementById("sen").value;
+  var rev = document.getElementById("rev").value;
+  var api = '06170211imucici';
+  var data = {
+    'sen': sen,
+    'rev': rev,
+    'method': "2",
+    'description':'Light token',
+    'txn':'VVN9UUDNPBMMNEIITLFDR9SMDHZSKEOVHMPLEVAAKEFHOGJSNUFSVRRNPPRKSHYMUYMBTUQSOIQHZ9999'
+  };
   
   $.ajax({
       url: "http://3.87.137.58:8888/send_token",
       type: 'POST',
-      dataType: 'json',
-      data: dataset,
+      
+      headers:{
+          "contentType":"application/json;",
+          "X-API-Key":api,
+      },
+      contentType: "application/json;",
+      data: JSON.stringify(data),
       success: function (result) {
-        alert(JSON.stringify(data));
+          alert(result);
       },
       error: function (error) {
-         alert("Cannot get data");
+          alert(error);
       }
   });
+
+  $("#sen").val("");
+  $("#rev").val("");
+  $("#cost").val("");
   
 }
 
-
-// 按完GoPay!後輸入欄位資訊清空
-$(".gopaybtn").click(function(){
-//   home_audio.play()
-  $("#sen").val(""),
-  $("#rev").val(""),
-  $("#cost").val("")
-});
     </script>
 </body>
 </html>

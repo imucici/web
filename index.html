@@ -460,13 +460,13 @@ h4 {
 <div class="icon2">P</div>
 </h2>
 <div class="UserName">🧑UserName : &nbsp &nbsp &nbsp
-<input id="userName" type="text" name="username" placeholder="ex : imucici" />
+<input id="username" type="text" name="username" placeholder="ex : imucici" />
 </div>
 <div class="Password">🔒Password : &nbsp &nbsp &nbsp &nbsp
 <input id="password" type="text" name="password" placeholder="ex : 12345" />
 </div>
-<div class="signinbtn" onclick="signin()">signin ➜</div>
-<div class="signupbtn" onclick="signup()">signup ➜</div>
+<div class="signinbtn" onclick="login()">登入 ➜</div>
+<div class="signupbtn" onclick="signup()">註冊 ➜</div>
 </div>
 <div class="page page3">
 <h2>今天想幹嘛</h2>
@@ -541,6 +541,57 @@ $(".button").click(function(){
   
 });
 
+// login_api
+
+function login(){
+  
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  var data = {
+              'name': username,
+              'password': password,
+                };
+  
+  console.log(data);
+  // alert(JSON.stringify(dataset));
+  
+  $.ajax({
+      url: "http://3.87.137.58:8888/login",
+      type: 'POST',
+      contentType: "application/json;",
+      data: JSON.stringify(data),
+      success: function (result) {
+          if(result.status_code=="200"){
+            alert("成功登入");
+            $(".pages").css("left","-"+2*100+"%");
+          }
+          else if(result.status_code=="404"){
+            alert("帳密錯誤");
+          }
+      },
+      error: function () {
+          alert("資料送不過去");
+      }
+  });
+  
+  $("#username").val("");
+  $("#password").val("");
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// send_token api
 
 function pay(){
   
@@ -548,12 +599,15 @@ function pay(){
   var rev = document.getElementById("rev").value;
   var api = '06170211imucici';
   var data = {
-    'sen': sen,
-    'rev': rev,
-    'method': "2",
-    'description':'Light token',
-    'txn':'VVN9UUDNPBMMNEIITLFDR9SMDHZSKEOVHMPLEVAAKEFHOGJSNUFSVRRNPPRKSHYMUYMBTUQSOIQHZ9999'
-  };
+              'sen': sen,
+              'rev': rev,
+              'method': "2",
+              'description':'Light token',
+              'txn':'IJNLOFEEXPFKMWHARQMR9GEXHJKYUHDRNP9JBPTISLMQHEFZSBDE9GQKDTRTVQRFONRGQWUUZM9SZ9999'
+                };
+  
+  console.log(data);
+  // alert(JSON.stringify(dataset));
   
   $.ajax({
       url: "http://3.87.137.58:8888/send_token",
@@ -572,13 +626,12 @@ function pay(){
           alert(error);
       }
   });
-
+  
   $("#sen").val("");
   $("#rev").val("");
   $("#cost").val("");
   
 }
-
     </script>
 </body>
 </html>

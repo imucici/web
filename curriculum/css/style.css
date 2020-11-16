@@ -1,0 +1,267 @@
+* {
+    position: relative;
+    font-weight: bolder;
+}
+
+html, body {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../work1/images/wood.jpg");
+    background-position: cover;
+    background-size: center center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    
+}
+
+
+.pin_topleft {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    border: solid 4px #374840;
+    background-color: #929e99;
+    border-radius: 100%;
+    top: 79px;
+    left: 21%;
+}
+
+
+.pin_topleft::before {
+    position: relative;
+    display: inline-block;
+    content: "+";
+    font-size: 23px;
+    font-weight: 900;
+    left: 5px;
+    transform: rotate(30deg);
+} 
+
+
+
+.pin_topright {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    border: solid 4px #374840;
+    background-color: #929e99;
+    border-radius: 100%;
+    top: 79px;
+    left: 76.5%;  
+}
+
+
+.pin_topright::before {
+    position: relative;
+    display: inline-block;
+    content: "+";
+    font-size: 23px;
+    font-weight: 900;
+    left: 5px;
+    transform: rotate(30deg);
+} 
+
+
+
+.pin_bottomleft {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    border: solid 4px #374840;
+    background-color: #929e99;
+    border-radius: 100%;
+    top: 510px;
+    left: 21%;
+}
+
+
+.pin_bottomleft::before {
+    position: relative;
+    display: inline-block;
+    content: "+";
+    font-size: 23px;
+    font-weight: 900;
+    left: 5px;
+    transform: rotate(30deg);
+} 
+
+
+.pin_bottomright {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    border: solid 4px #374840;
+    background-color: #929e99;
+    border-radius: 100%;
+    top: 510px;
+    left: 76.5%;  
+}
+
+
+.pin_bottomright::before {
+    position: relative;
+    display: inline-block;
+    content: "+";
+    font-size: 23px;
+    font-weight: 900;
+    left: 5px;
+    transform: rotate(30deg);
+} 
+
+
+.title1 {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+}
+
+        
+
+.title2 {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+}
+
+
+
+th[class=line] {
+    width: 70px;
+}
+
+th[class=line]:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 104px;
+    top: 0;
+    left: 0;
+    background-color: #929e99;
+    display: block;
+    transform: rotate(289deg);
+    transform-origin: top;
+    
+}
+
+td[class=info_div] {
+    height: 55px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.table_frame {
+    top : 11%;
+    left: 20%; 
+    overflow-x: hidden;
+    border: solid 4px #644020;
+    width: 60%;
+    /* width: 770px; */
+    height: 80%;
+    background-color:#996533;
+    box-shadow: 8px 9px 15px #333;
+}
+
+.tables {
+    margin: auto;
+    top : 50px;
+    width: 85%;
+    height: 82%;
+    background-color: #374840;
+    
+}
+
+
+table,th,td,tr {
+    border: none;
+    text-align: center;
+    border-collapse: collapse;
+    color: #F5F5F5	;
+}
+
+th {
+    border-bottom: solid 5px #929e99;
+    height: 30px;
+    /* 對角線框的高度 */
+}
+
+td {
+    width: 92px;
+}
+
+/* 不含標題列的橫下邊界 */
+.rows ,.noon {
+    border-bottom: solid 2px #929e99;
+}
+
+
+/* 直邊界 */
+td,th {
+    border-right: solid 2px #929e99;
+    padding: 2px;
+}
+
+#font {
+    border-bottom: solid 2px #374840;
+}
+
+#last_col {
+    border-right: none;
+}
+
+
+table {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    border: none;
+    top : 22px;
+    background-color: #374840;
+    table-layout: fixed;
+    word-wrap: inherit; 
+}
+
+
+
+.rowname {
+    font-weight: 900;   
+    border-right: solid 4px #929e99;
+}
+
+.rowname_E {
+    border-right: solid 5px #929e99;
+}
+
+
+#noon_span {
+    text-align: right;
+    color: #fcca0b;
+    border-right: none;
+    letter-spacing: 30px;
+
+}
+.info_div:hover .info{
+    display:block;
+}
+
+.info {
+    font-size: 6px;
+    display:none;
+    color: #fcca0b;
+}
+
+

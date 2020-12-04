@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.js"></script>
+    <title>youtube</title>
+</head>
+<body>
+
+    
+    <!--  螢幕遮罩  -->
+    <div id='mask' onclick='nomask()'></div>
+
+    <!-- header -->
+    <header id="header">
+
+
+        <div id="nav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
+            <div class="youtube_pic_nav" onclick="goyoutube()"></div>
+            
+            <div class="overlay-content">
+                
+
+                <div class="inner1">
+
+                    <div class="home_wrap">
+
+                        <img id='home' src="../work4/images/home.png">
+                        <a href="#">首頁&nbsp &nbsp &nbsp &nbsp</a>
+
+                    </div>
+                    
+                    <div class="hot_wrap">
+                    
+                        <img id='hot' src="../work4/images/hot.png">
+                        <a href="#">發燒影片</a>
+                    
+                    </div>
+
+                    <div class="navsub_wrap">
+                    
+                        <img id='navsub' src="../work4/images/navsub.png">
+                        <a href="#">訂閱內容</a>
+                    
+                    </div>
+                </div>
+
+
+
+                <div class="inner2">
+                
+                    <div class="db_wrap">
+                
+                        <img id='db' src="../work4/images/db.png">
+                        <a href="#">媒體庫&nbsp &nbsp &nbsp</a>
+                
+                    </div>
+                
+                    <div class="history_wrap">
+                
+                        <img id='history' src="../work4/images/history.png">
+                        <a href="#">觀看紀錄</a>
+                
+                    </div>
+                
+                    <div class="vedio_wrap">
+                
+                        <img id='vedio' src="../work4/images/vedio.png">
+                        <a href="#">你的影片</a>
+                
+                    </div>
+
+                    <div class="see_wrap">
+                    
+                        <img id='see' src="../work4/images/see.png">
+                        <a href="#">稍後觀看</a>
+                    
+                    </div>
+
+                    <div class="likevedio_wrap">
+                    
+                        <img id='likevedio' src="../work4/images/likevedio.png">
+                        <a href="#">喜歡的影片</a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- &#9776三條橫槓html實體字符 -->
+        <span id='three_bar' class='three_bar' onclick="openNav()">&#9776;</span>
+        <div class="youtube_pic" onclick="goyoutube()"></div>
+    
+        
+        <div class="search">
+            <input id="search_t" type="text" placeholder="搜尋">
+
+            <div class="wrap_sbtn" onmouseover="searchhoverfun()" onmouseout="searchhoverfunout()">
+                <div class="search_btn"></div>
+            </div>
+            
+        </div>
+
+        <div class="wrap_camera" onmouseover="camerahoverfun()" onmouseout="camerahoverfunout()">
+            <div class="camera"></div>
+        </div>
+            
+        <div class="wrap_square" onmouseover="squarehoverfun()" onmouseout="squarehoverfunout()">
+            <div class="square"></div>
+        </div>
+        
+        <div class="wrap_bells" onmouseover="bellshoverfun()" onmouseout="bellshoverfunout()">
+            <div class="bells"></div>
+        </div>
+        
+        <div class="self_icon"></div>
+        
+    </header>
+
+
+
+
+    <!-- 懸浮 -->
+    <div id="search_hover" class="search_hover">搜尋</div>
+    <div id="camera_hover" class="camera_hover">建立</div>
+    <div id="square_hover" class="square_hover">YouTube應用程式</div>
+    <div id="bells_hover" class="bells_hover">通知</div>
+
+
+    <!-- content -->
+    <div class="content" id='content'>
+
+        <div class="left">
+            <iframe class="left_movie" src="https://www.youtube.com/embed/pq4RwBidtGs" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+           
+            <div class="title">
+                <span class="name">張雲龍-趁年輕(官方歌詞版)-電視劇《趁我們還年輕》片頭曲</span>
+                
+                <div class="subtitle">
+                    <div class="info">觀看次數：33,497次 • 2019年4月25日</div>
+                    
+                    <div class="wrap">
+                        
+                        <div class="like_dislike">
+                            <div class="wrap_like" onmouseover="canclelikehoverfun()" onmouseout="canclelikehoverfunout()">
+                                <div class="like"></div>
+                                <span class="like_text">300</span>
+                            </div>
+                            
+                            
+                            <div class="wrap_dislike" onmouseover="dislikehoverfun()" onmouseout="dislikehoverfunout()">
+                                <div class="dislike"></div>
+                                <span class="dislike_text">4</span>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="wrap_share" onmouseover="sharehoverfun()" onmouseout="sharehoverfunout()">
+                            <div class="share"></div>
+                            <div class="share_text">分享</div>
+                        </div>
+                        
+                        
+                        <div class="wrap_save" onmouseover="savehoverfun()" onmouseout="savehoverfunout()">
+                            <div class="save"></div>
+                            <div class="save_text">儲存</div>
+                        </div>
+                        
+                        
+                        <div class="more">...</div>
+                    </div>
+
+                </div>
+                
+
+                <!-- 懸浮 -->
+                <div id="logo_hover" class="logo_hover">無二音樂</div>
+                <div id="canclelike_hover" class="canclelike_hover">取消喜歡</div>
+                <div id="dislike_hover" class="dislike_hover">我不喜歡</div>
+                <div id="share_hover" class="share_hover">分享</div>
+                <div id="save_hover" class="save_hover">儲存</div>
+                <!-- information -->
+
+                <div class="company_wrap">
+                    <div class="logo" onclick="gocompany()"></div>
+
+                    <div class="wrap_logo" onmouseover="logohoverfun()" onmouseout="logohoverfunout()">
+                        <p class="logo_name">無二音樂</p>
+                    </div>
+                    
+
+                    <button class="subscribe">訂閱</button>
+                </div>
+
+                <p class="url_text">
+                    免費訂閱無二音樂頻道►<a href="https://www.youtube.com/channel/UCMElSC5ghCiyNtbu6HLDVGQ?sub_confirmation=1" target="_blank" >https://goo.gl/ZPQJoK</a>
+                    <br>【PPM宏揚官方網站】<a href="https://sedo.com/search/details/?partnerid=324561&language=cn&domain=ppmg.net&origin=sales_lander_1&utm_medium=Parking&utm_campaign=offerpage" target="_blank">http://www.ppmg.net/</a>
+                    <br>【PPM宏揚FB】<a href="https://www.facebook.com/propromoting/" target="_blank">https://goo.gl/bXiq99</a>
+                </p>
+
+
+
+
+                <div class="collapse">
+
+                    <div id="open" onclick="openfun()">顯示完整資訊</div>
+                    <br>
+                    <p id="hidden">
+                        由張雲龍演唱，陳曦作詞、董冬冬作曲的片頭曲《趁年輕》率先上線。
+                        <br>
+                        <br>
+                        行進式的木吉他，在整首歌曲的前奏部分，就把人帶入了一種積極明快的聽感狀態中。飽滿而顆粒感分明的律動，就像在人生道路上昂首闊步行走，正如歌詞所寫——“每天都一樣/對未來充滿幻想”。隨著弦樂鋪陳加入，這種“行走感”突然變成了“奔跑”，擴開氣勢的同時，也逐漸讓情緒與“年輕”二字完美呼應，編曲層次上的分寸感和遞進節奏，從來都是董冬冬的拿手好戲。
+                        <br>
+                        <br>
+                        終於，“在一起勇敢破冰/登上最高的山頂”，把年輕人走出校園後的熱情和追逐夢想的奮鬥歷程，在音樂中展現得淋漓盡致。而整首歌的間奏和尾奏，同樣是亮點，濃重的英倫搖滾色彩，包括電吉他演奏的連複段，都讓人留下了印象深刻的“抓耳感”，也將“熱血奮鬥、勇敢追愛”的主題塑造得更加立體。
+                        <br>
+                        <br>
+                        值得一提的是，在人聲部分，演唱者張雲龍也表現得溫暖而有厚度，尤其在兩處高音部分，接近呐喊式樣的唱法極具穿透力。既演繹出滿滿的少年感，也融入了人物“燃氣”十足的性格。
+                        <br>
+                        <br>
+                        趁年輕，痛快地為自己、為夢想、為愛活出來。<br>
+              
+                        <br>
+                        <br>
+                        <br>
+                        《趁年輕》<br>
+                        電視劇《趁我們還年輕》片頭曲<br>
+                        <br>
+                        作詞：陳曦<br>
+                        作曲：董冬冬<br>
+                        <br>
+                        每天都一樣 對未來充滿幻想<br>
+                        總有一束光 在遙遠星空飛翔<br>
+                        好像翅膀有力量 在我的心中成長<br>
+                        <br>
+                        站在山頂上 想飛向那個地方<br>
+                        能扶搖直上 在浩瀚宇宙翱翔<br>
+                        插上翅膀能飛向 那個有你的地方<br>
+                        <br>
+                        Honey 趁我們都還年輕<br>
+                        穿越一萬光年的距離與你相聚<br>
+                        愛上你是我的命 愛上你快如流星<br>
+                        絕不放棄<br>
+                        <br>
+                        Honey 趁我們都還年輕<br>
+                        能看清生命中的陷阱 與夢同行<br>
+                        在一起勇敢破冰 登上最高的山頂<br>
+                        山頂
+                    </p>
+
+                    <div id="close" onclick="closefun()">只顯示部分資訊</div>
+
+                </div>
+                
+
+
+                <div class="whole_mes" id='whole_mes'>
+                    <div class="message_title">
+                        <div class="count">3則留言</div>
+                        <div class="sort_pic"></div>
+                        <div class="sort">排序依據</div>
+                    </div>
+
+                    <div class="add_mes">
+                        <div class="add_icon"></div>
+                        <input type="text" id="textarea" class="textarea" placeholder="新增公開留言..." onclick="gocomment()">
+                    </div>
+                </div>
+
+
+                <!-- 隱藏comment區 -->
+                <div class="wrap_hide_comment">
+                    <button id='cancle' class="cancle" onclick="canclecomment()">取消</button>
+                    <button id='addcomment' class="addcomment">留言</button>
+                </div>
+                
+
+
+
+
+
+
+
+                <div class="mes_content">
+                    
+                    <!-- mes1 -->
+                    <div class="mes1">
+                        <div class="mes_pic1"></div>
+
+                        <div class="mes_right">
+
+                            <div class="mes_top_wrap">
+                                <div class="mes_name">Christin</div>
+                                <div class="mes_time">1年前</div>
+                            </div>
+                            
+                            <div class="mes_txet">张云龙唱得好听！😍🤩</div>
+                            
+                            <div class="mes_bottom_wrap">
+                                <div class="m_like_pic"></div>
+                                <div class="m_like">8</div>
+                                <div class="m_dislike_pic"></div>
+                                <div class="reply">回覆</div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- mes2 -->
+                    <div class="mes2">
+                        <div class="mes_pic2"></div>
+                    
+                        <div class="mes_right">
+                    
+                            <div class="mes_top_wrap">
+                                <div class="mes_name">starlight</div>
+                                <div class="mes_time">1年前</div>
+                            </div>
+                    
+                            <div class="mes_txet">But the drama intro kinda look different where can i find that version?</div>
+                    
+                            <div class="mes_bottom_wrap">
+                                <div class="m_like_pic"></div>
+                                <div class="m_like">1</div>
+                                <div class="m_dislike_pic"></div>
+                                <div class="reply">回覆</div>
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+                    
+                    <!-- mes3 -->
+                    <div class="mes3">
+                        <div class="mes_pic3"></div>
+                    
+                        <div class="mes_right">
+                    
+                            <div class="mes_top_wrap">
+                                <div class="mes_name">Joy esther</div>
+                                <div class="mes_time">1年前</div>
+                            </div>
+                    
+                            <div class="mes_txet">迷上同鄉大連人，哈哈！</div>
+                    
+                            <div class="mes_bottom_wrap">
+                                <div class="m_like_pic"></div>
+                                <div class="m_like">4</div>
+                                <div class="m_dislike_pic"></div>
+                                <div class="reply">回覆</div>
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+                </div>
+                  
+
+
+
+
+
+
+
+
+            </div>
+            
+            
+            
+            
+            
+        </div>
+        <div class="right">
+            <!-- <div class="adv_pic"></div> -->
+
+            <div class="right_top">
+
+
+
+                <div class="play_wrap">
+                    <span class="coming_soon">即將播放</span>
+                    
+                    <span class="auto">自動播放</span>
+                    
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+
+                </div>
+                
+
+
+
+                <div class="right_wrap">
+                    <iframe class="right_movie" src="https://www.youtube.com/embed/pq4RwBidtGs?&controls=0&rel=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    
+                    <div class="right_info">
+                    
+                        <span class="left_name">張雲龍-趁年輕(官方歌詞版)</span>
+                    
+                        <div class="right_record_company">Various Artists - Topic</div>
+                            
+                        <div class="right_updatetime">觀看次數 : 654 • 3個月前</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="right_wrap">
+                <iframe class="right_mid_movie" src="https://www.youtube.com/embed/pq4RwBidtGs?&controls=0&rel=0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            
+                <div class="right_mid_info">
+            
+                    <span class="left_name">張雲龍-趁年輕(官方歌詞版)</span>
+            
+                    <div class="right_record_company">Various Artists - Topic</div>
+            
+                    <div class="right_updatetime">觀看次數 : 654 • 3個月前</div>
+                </div>
+            
+            </div>
+            
+
+            <div class="right_wrap">
+                <iframe class="right_btm_movie" src="https://www.youtube.com/embed/pq4RwBidtGs?&controls=0&rel=0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            
+                <div class="right_btm_info">
+            
+                    <span class="left_name">張雲龍-趁年輕(官方歌詞版)</span>
+            
+                    <div class="right_record_company">Various Artists - Topic</div>
+            
+                    <div class="right_updatetime">觀看次數 : 654 • 3個月前</div>
+                </div>
+            
+            </div>
+
+            <div class="right_wrap">
+                <iframe class="right_btm_movie" src="https://www.youtube.com/embed/pq4RwBidtGs?&controls=0&rel=0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            
+                <div class="right_btm_info">
+            
+                    <span class="left_name">張雲龍-趁年輕(官方歌詞版)</span>
+            
+                    <div class="right_record_company">Various Artists - Topic</div>
+            
+                    <div class="right_updatetime">觀看次數 : 654 • 3個月前</div>
+                </div>
+            
+            </div>
+
+            <div class="right_wrap">
+                <iframe class="right_btm_movie" src="https://www.youtube.com/embed/pq4RwBidtGs?&controls=0&rel=0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            
+                <div class="right_btm_info">
+            
+                    <span class="left_name">張雲龍-趁年輕(官方歌詞版)</span>
+            
+                    <div class="right_record_company">Various Artists - Topic</div>
+            
+                    <div class="right_updatetime">觀看次數 : 654 • 3個月前</div>
+                </div>
+            
+            </div>
+
+            <div class="right_wrap">
+                <iframe class="right_btm_movie" src="https://www.youtube.com/embed/pq4RwBidtGs?&controls=0&rel=0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            
+                <div class="right_btm_info">
+            
+                    <span class="left_name">張雲龍-趁年輕(官方歌詞版)</span>
+            
+                    <div class="right_record_company">Various Artists - Topic</div>
+            
+                    <div class="right_updatetime">觀看次數 : 654 • 3個月前</div>
+                </div>
+            
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+   
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.js"></script>
+    <title>ig頁面</title>
+</head>
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <div id="iglogo"></div>
+
+        
+            <div class='search_wrap' id='search_wrap' onclick="searchfun()">
+                <div class='searchimg' id="searchimg"></div>
+                <div class='search_text' id="search_text">搜尋</div>
+            </div>
+
+            <div class='search_wrap' id='search_wrap_hid'>
+                <div id="searchimg_hid"></div>
+                <div id="cancleimg_hid"></div>
+            </div>
+            <input id='inp' type="text" placeholder="搜尋" onblur="canclesearch()"></input>
+
+            
+
+            <div class="header home"></div>
+            <div class="header mes"></div>
+            <div class="header compass"></div>
+            <div class="header header_like"></div>
+            <div class="header self_icon"></div>
+    </header>
+
+
+    <!-- content -->
+    <div id="content" class="content">
+
+        <!-- left -->
+        <div class="left">
+            <!-- 現實動態區 -->
+            <div id="realistic_div">
+                
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real1"></div>
+                    <div class="real_text">afu_ho</div>
+                </div>
+                
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real2"></div>
+                    <div class="real_text">soda_miss</div>
+                </div>
+
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real3"></div>
+                    <div class="real_text">soda.mimi_</div>
+                </div>
+
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real4"></div>
+                    <div class="real_text">bbcnews</div>
+                </div>
+
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real5"></div>
+                    <div class="real_text">sodagreen</div>
+                </div>
+
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real6"></div>
+                    <div class="real_text">tigercat_tw</div>
+                </div>
+
+                <div class="real_wrap">
+                    <div class="linear_color"></div>
+                    <div id="real7"></div>
+                    <div class="real_text">imqingfeng</div>
+                </div>
+            </div>
+
+            <!-- 文章區 -->
+            <div class="article">
+
+                <div class="title">
+                    <div class="title_icon"></div>
+                    <div class="title_name">theeconomist</div>
+                </div>
+
+                <!-- 圖 -->
+                <div class="pic" id="pic1"></div>
+                <div class="pic" id="pic2"></div>
+
+                <!-- 按鈕 -->
+                <div class="btn_wrap">
+                    <div class="article_like"></div>
+                    <div class="comment"></div>
+                    <div class="forward"></div>
+                    <div class="receive"></div>
+                </div>
+
+                <div class="count_wrap">
+                    <div class="count">139</div>
+                    <div class="unit">個讚</div>
+                </div>
+
+
+                <!-- context -->
+                <div class="context" id="content1">
+
+                    <div class="firstline">
+                        <div class="context_name">theeconomist</div>
+                        
+                        <div class="context_out">Covid-19 vaccines are coming to Europe</div>
+                        
+                        <div id="open" class='open' onclick="openfun()">... 更多</div>
+                    </div>
+                    
+                    <!-- hidden -->
+                        <p id="hidden" class='hidden'>
+                            
+                            That’s the question we recently asked our journalists—and we’ve compiled their responses into a handy list for you. ⁠
+                            <br>
+                            <br>
+                            There are 40 recommendations to choose from. Which will you start with?⁠
+                            <br>
+                            <br>
+                            To take your pick from The Economist’s bookshelf, tap on the link in our bio.⁠
+                        </p>
+
+                    <div class="allcontent">查看全部 7 則留言</div>
+                    
+                    <!-- mes -->
+                    <div class="mes_wrap">
+                        <div class="people">zurkop</div>
+                        <div class="message">And more difficult for the climbers ‼️</div>
+                        
+                    </div>
+
+                    <div class="mes_wrap">
+                        <div class="people">sohamdats</div>
+                        <div class="message">Go vegan is the best step to stop climate change ✊🏻</div>
+                        
+                    </div>
+
+                    <!-- ago -->
+                    <div class="agos"> 2 天前</div>
+             
+                </div>
+                
+            </div>
+            <!-- input -->
+            <div class="input_wrap">
+                <input class='input' id='input' placeholder="留言......" oninput="inputfun1()"></input>
+                <div class="input_blue" id='input_blue'>發佈</div>
+            </div>
+            
+
+
+
+
+            <!-- 文章區2 -->
+            <div class="article">
+
+                <div class="title">
+                    <div class="title_icon"></div>
+                    <div class="title_name">theeconomist</div>
+                </div>
+
+                <!-- 圖 -->
+                <div class="pic" id="pic1"></div>
+                <div class="pic" id="pic2"></div>
+
+                <!-- 按鈕 -->
+                <div class="btn_wrap">
+                    <div class="article_like"></div>
+                    <div class="comment"></div>
+                    <div class="forward"></div>
+                    <div class="receive"></div>
+                </div>
+
+                <div class="count_wrap">
+                    <div class="count">139</div>
+                    <div class="unit">個讚</div>
+                </div>
+
+
+                <!-- context -->
+                <div class="context" id="content1">
+
+                    <div class="firstline">
+                        <div class="context_name">theeconomist</div>
+                        
+                        <div class="context_out">Covid-19 vaccines are coming to Europe</div>
+                        
+                        <div id="open2" class='open' onclick="openfun2()">... 更多</div>
+                    </div>
+                    
+                    <!-- hidden -->
+                        <p class='hidden' id="hidden2">
+                            
+                            That’s the question we recently asked our journalists—and we’ve compiled their responses into a handy list for you. ⁠
+                            <br>
+                            <br>
+                            There are 40 recommendations to choose from. Which will you start with?⁠
+                            <br>
+                            <br>
+                            To take your pick from The Economist’s bookshelf, tap on the link in our bio.⁠
+                        </p>
+
+                    <div class="allcontent">查看全部 7 則留言</div>
+                    
+                    <!-- mes -->
+                    <div class="mes_wrap">
+                        <div class="people">zurkop</div>
+                        <div class="message">And more difficult for the climbers ‼️</div>
+                        
+                    </div>
+
+                    <div class="mes_wrap">
+                        <div class="people">sohamdats</div>
+                        <div class="message">Go vegan is the best step to stop climate change ✊🏻</div>
+                        
+                    </div>
+
+                    <!-- ago -->
+                    <div class="agos"> 2 天前</div>
+             
+                </div>
+                
+            </div>
+            <!-- input -->
+            <div class="input_wrap">
+                <input class='input' id='input2' placeholder="留言......" oninput="inputfun2()"></input>
+                <div class="input_blue" id='input_blue2'>發佈</div>
+            </div>
+
+            <!-- 文章區3 -->
+            <div class="article">
+            
+                <div class="title">
+                    <div class="title_icon"></div>
+                    <div class="title_name">theeconomist</div>
+                </div>
+            
+                <!-- 圖 -->
+                <div class="pic" id="pic1"></div>
+                <div class="pic" id="pic2"></div>
+            
+                <!-- 按鈕 -->
+                <div class="btn_wrap">
+                    <div class="article_like"></div>
+                    <div class="comment"></div>
+                    <div class="forward"></div>
+                    <div class="receive"></div>
+                </div>
+            
+                <div class="count_wrap">
+                    <div class="count">139</div>
+                    <div class="unit">個讚</div>
+                </div>
+            
+            
+                <!-- context -->
+                <div class="context" id="content1">
+            
+                    <div class="firstline">
+                        <div class="context_name">theeconomist</div>
+            
+                        <div class="context_out">Covid-19 vaccines are coming to Europe</div>
+            
+                        <div class='open' id="open3" onclick="openfun3()">... 更多</div>
+                    </div>
+            
+                    <!-- hidden -->
+                    <p id="hidden3" class='hidden'>
+            
+                        That’s the question we recently asked our journalists—and we’ve compiled their responses into a handy list
+                        for you. ⁠
+                        <br>
+                        <br>
+                        There are 40 recommendations to choose from. Which will you start with?⁠
+                        <br>
+                        <br>
+                        To take your pick from The Economist’s bookshelf, tap on the link in our bio.⁠
+                    </p>
+            
+                    <div class="allcontent">查看全部 7 則留言</div>
+            
+                    <!-- mes -->
+                    <div class="mes_wrap">
+                        <div class="people">zurkop</div>
+                        <div class="message">And more difficult for the climbers ‼️</div>
+            
+                    </div>
+            
+                    <div class="mes_wrap">
+                        <div class="people">sohamdats</div>
+                        <div class="message">Go vegan is the best step to stop climate change ✊🏻</div>
+            
+                    </div>
+            
+                    <!-- ago -->
+                    <div class="agos"> 2 天前</div>
+            
+                </div>
+            
+            </div>
+            <!-- input -->
+            <div class="input_wrap">
+                <input class='input' id='input3' placeholder="留言......" oninput="inputfun3()"></input>
+                <div class="input_blue" id='input_blue3'>發佈</div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+        </div>
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- right -->
+        <div class="right">
+            
+            <!-- my account -->
+            <div class="myaccount_wrap">
+                <div class="myicon"></div>
+
+                <div class="name">
+                    <div class="firstname">imucici</div>
+                    <div class="lastname">mmc</div>
+                </div>
+    
+                <span class="switch">切換</span>
+            </div>
+
+            <!-- middle info -->
+            <div class="mid_info_wrap">
+                <div class="recommand">推薦用戶</div>
+                <div class="seeall">查看全部</div>
+            </div>
+
+
+
+            <!-- recommands -->
+
+            <div class="recommands_wrap">
+                <div class="icon1"></div>
+            
+                <div class="recname">
+                    <div class="firstname">evekomorebi</div>
+                    <div class="lastname">instagram 新用戶</div>
+                </div>
+            
+                <span class="recswitch">追蹤</span>
+            </div>
+
+            <div class="recommands_wrap">
+                <div class="icon2"></div>
+            
+                <div class="recname">
+                    <div class="firstname">sku.0707</div>
+                    <div class="lastname">instagram 新用戶</div>
+                </div>
+            
+                <span class="recswitch">追蹤</span>
+            </div>
+
+            <div class="recommands_wrap">
+                <div class="icon3"></div>
+            
+                <div class="recname">
+                    <div class="firstname">coffee_picky</div>
+                    <div class="lastname">instagram 新用戶</div>
+                </div>
+            
+                <span class="recswitch">追蹤</span>
+            </div>
+
+            <div class="recommands_wrap">
+                <div class="icon4"></div>
+            
+                <div class="recname">
+                    <div class="firstname">triple_patrick</div>
+                    <div class="lastname">instagram 新用戶</div>
+                </div>
+            
+                <span class="recswitch">追蹤</span>
+            </div>
+
+            <div class="recommands_wrap">
+                <div class="icon5"></div>
+            
+                <div class="recname">
+                    <div class="firstname">hsuechin</div>
+                    <div class="lastname">instagram 新用戶</div>
+                </div>
+            
+                <span class="recswitch">追蹤</span>
+            </div>
+
+            <!-- footer -->
+            <div class="footer1">
+                關於 . 使用說明 . 新聞稿 . API . 工作機會 . 隱私 .<br>
+            </div>
+            <div class="footer2">
+                使用條款 . 地點 . 熱門帳號 . 主題標籤 . 語言
+            </div>
+            <div class="footer3">
+                © 2020FACEBOOK 旗下的 INSTAGRAM
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>

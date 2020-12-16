@@ -1,0 +1,828 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html,body {
+    background-color: #f1f1f1;
+    width : 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+
+/* header */
+header {
+    height: 54px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 9px;
+    text-align: center;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #dbdbdb;
+}
+
+#iglogo {
+    position: absolute;
+    cursor: pointer;
+    left: 156px;
+    height: 35px;
+    width: 120px;
+    background-image: url("../images/iglogo.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.search_wrap {
+    cursor: text;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 3px;
+    height: 28px;
+    width: 215px;
+    border : solid 1px #dbdbdb;
+    left: 515px;
+}
+
+
+.searchimg {
+    margin-left: 78px;
+    margin-right: 4px;
+    top : 1px;
+    height: 15px;
+    width: 15px;
+    background-image: url("../images/search.jpg");
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.search_text {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+#search_wrap_hid, #inp {
+    display: none;
+}
+
+
+
+#inp {
+    position: absolute;
+    height: 30px;
+    width: 140px;
+    margin-left: 540px;
+    top : 13px;
+    border: none;
+    background: transparent;
+}
+
+#inp:focus {
+    outline: none;
+}
+
+
+::-webkit-input-placeholder {
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+#searchimg_hid {
+    margin-left: 9px;
+    top : 1px;
+    height: 15px;
+    width: 15px;
+    background-image: url("../images/search.jpg");
+    background-position: center center;
+    background-size: cover;
+    cursor: default;
+}
+
+#cancleimg_hid {
+    margin-left: 168px;
+    height: 16px;
+    width: 16px;
+    background-image: url("../images/cancle.png");
+    background-position: center center;
+    background-size: cover;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+.header {
+    position: absolute;
+    margin-right: 90px;
+}
+
+.home {
+    position: absolute;
+    cursor: pointer;
+    left: 896px;
+    height: 32px;
+    width: 32px;
+    background-image: url("../images/home.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.mes {
+    position: absolute;
+    cursor: pointer;
+    left: 940px;
+    height: 32px;
+    width: 32px;
+    background-image: url("../images/mes.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.compass {
+    position: absolute;
+    cursor: pointer;
+    left: 984px;
+    height: 32px;
+    width: 32px;
+    background-image: url("../images/compass.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.header_like {
+    position: absolute;
+    cursor: pointer;
+    left: 1030px;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/like.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.self_icon {
+    position: absolute;
+    cursor: pointer;
+    left: 1072px;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/selficon.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+/* content */
+/* 若版面要左右分割，外面用父元素包--display:flex ; 寬100% margin(l/r):auto*/
+/* 左右切版設寬度%數 */
+
+.content {
+    position: relative;
+    margin-top : 54px;
+    display: flex;/* 水平呈現 */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0px 0px;
+    padding-left: 163px;
+    padding-right: 150px;
+    background-color: #fafafa;
+}
+
+
+
+/* left */
+.left {
+    /* border: solid 1px blue; */
+    width: 65%;
+    /* height: 500px; */
+    
+}
+
+#realistic_div {
+    background-color: white;
+    border : solid 1px #dbdbdb;
+    height: 118px;
+    display: flex;
+    align-items: center;
+    padding-left: 19px;
+}
+
+.real_wrap {
+    /* border: solid 1px blue; */
+    vertical-align: middle;
+    text-align:center;
+    margin-right: 18px;
+    padding: 3px;
+}
+
+.real_text {
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.linear_color {
+    position: absolute;
+    left: 1px;
+    top : 1px;
+    cursor: pointer;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    /* background-image: url("../images/real1.png"); */
+    /* background-position: center center; */
+    /* background-size: cover; */
+    background: linear-gradient(to right top,#f99f4f,#c62e90);
+}
+
+#real1 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real3.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+
+#real2 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real1.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+#real3 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real2.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+
+#real4 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real4.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+#real5 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real5.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+#real6 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real6.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+
+#real7 {
+    cursor: pointer;
+    border: solid 2px white;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    background-image: url("../images/real7.png");
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+
+.article {
+    margin-top: 25px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color: white;
+    border: solid 1px #dbdbdb;
+    
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: solid 1px #dbdbdb;
+    padding: 13px 13px 13px 15px;
+}
+
+.title_icon {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background-image: url("../images/titleicon1.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.title_name {
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 14px;
+    color: #262626;
+    margin-left: 20px;
+}
+
+.title::after {
+    position: absolute;
+    cursor: pointer;
+    content: "...";
+    top : 13px;
+    left: 583px;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+#pic1 {
+    /* border: solid 2px pink; */
+    /* height: 65%; */
+    height: 270px;
+    background-image: url("../images/articlepic1.png");
+    background-position: center center;
+    background-size: cover;
+    
+}
+#pic2 {
+    /* border: solid 2px pink; */
+    height: 350px;
+    /* height: 65%; */
+    background-image: url("../images/articlepic2.png");
+    background-position: center center;
+    background-size: cover;    
+}
+
+.btn_wrap {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    border-radius: 0px;
+}
+
+
+.article_like {
+    border: none;
+    cursor: pointer;
+    left: 5px;
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+    background-image: url("../images/like.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.comment {
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    height: 29px;
+    width: 29px;
+    background-image: url("../images/comment.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.forward {
+    border: none;
+    cursor: pointer;
+    margin-right: 450px;
+    height: 26px;
+    width: 26px;
+    background-image: url("../images/forward.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.receive {
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    background-image: url("../images/receive.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.count_wrap {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 14px;
+    margin-left: 15px;
+    color: #262626;
+    /* border : solid 1px green; */
+}
+
+.count {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.unit {
+    cursor: pointer;
+}
+
+.context {
+    /* border : solid 1p`x blue; */
+    margin-top: 8px;
+    /* display: flex; */
+    font-size: 14px;
+
+}
+
+.firstline {
+    display: flex;
+    align-items: center;
+}
+
+.context_name {
+    /* border : solid 1px red; */
+    font-weight: bolder;
+    cursor: pointer;
+    color: #262626;
+    margin-left: 15px;
+
+}
+
+.context_out {
+    color: #262626;
+    margin-left: 5px;
+}
+
+.open {
+    cursor: pointer;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+
+.hidden {
+    margin-left: 15px;
+    display: none;
+}
+
+
+.allcontent {
+    margin-left: 15px;
+    font-size: 14px;
+    color : #8e8e8e;
+    cursor: pointer;
+}
+
+.mes_wrap {
+    display: flex;
+    align-items: center;
+    /* border: solid 1px red; */
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.people {
+    cursor: pointer;
+    font-weight: bolder;
+    
+}
+
+.message {
+    font-size: 14px;
+    color: #262626;
+    margin-left: 5px;
+}
+
+.mes_wrap::after {
+    border: solid 1px red;
+    position: absolute;
+    left: 570px;
+    content: " ";
+    border: none;
+    cursor: pointer;
+    /* left: 200px; */
+    height: 15px;
+    width: 15px;
+    background-image: url("../images/meslike.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.agos {
+    margin-top: 3px;
+    font-size: 12px;
+    color : #8e8e8e;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.input_wrap {
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.input {
+    width: 100%;
+    font-size: 14px;
+    color : #8e8e8e;
+    padding: 20px;
+    
+    border-top: none;
+    /* border: solid 1px #d9d9d9; */
+    border-left: solid 1px #dbdbdb;
+    border-right: solid 1px #dbdbdb;
+    border-bottom: solid 1px #dbdbdb;
+}
+
+.input:focus {
+    outline: none;
+    border-top: white;
+    border-radius: 2px;
+}
+
+.input_blue {
+    position: absolute;
+    left: 575px;
+    font-weight: bolder;
+    /* border: solid 1px red; */
+    display: inline-block;
+    width: 50px;
+    font-size: 13px;
+    color: #b4e0fc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* right */
+.right {
+    position: fixed;
+    /* border : solid 2px green; */
+    left: 782px;
+    width:  25%;
+    height: 500px;
+    margin-left: 24px;
+}
+
+/* my account */
+.myaccount_wrap {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.myicon {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    background-image: url("../images/myicon.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.name {
+    vertical-align: center;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.firstname {
+    display: flex;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #262626;
+    margin-bottom: 1px;
+}
+
+.lastname {
+    display: flex;
+    cursor: text;
+    color: #8e8e8e;
+}
+
+.switch {
+    left: 150px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #0095f6;
+    font-weight: bolder;
+}
+
+/* middle info */
+.mid_info_wrap {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    margin: 20px 0px 14px 3px;
+}
+
+.recommand {
+    color: #8e8e8e;
+    font-size: 14px;
+    margin-right: 185px;
+}
+
+.seeall {
+    cursor: pointer;
+    font-size: 12px;
+    color: #262626;
+}
+
+
+
+
+.recommands_wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon1 {
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    background-image: url("../images/icon1.png");
+    background-position: center center;
+    background-size: cover;
+}
+.icon2 {
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    background-image: url("../images/icon2.png");
+    background-position: center center;
+    background-size: cover;
+}
+.icon3 {
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    background-image: url("../images/icon3.png");
+    background-position: center center;
+    background-size: cover;
+}
+.icon4 {
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    background-image: url("../images/icon4.png");
+    background-position: center center;
+    background-size: cover;
+}
+.icon5 {
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    background-image: url("../images/icon5.png");
+    background-position: center center;
+    background-size: cover;
+}
+.recname {
+    vertical-align: center;
+    font-size: 14px;
+    margin-left: 9px;
+    color: #262626;
+}
+
+
+.recname .firstname:hover, .title_name:hover, .context_name:hover, .people:hover{
+    text-decoration: underline;
+}
+
+
+.recswitch {
+    left: 120px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #0095f6;
+    font-weight: bolder;
+}
+
+.footer1, .footer2, .footer3 {
+    font-size: 12px;
+    color: #c7c7c7;
+}
+
+.footer1 {
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+.footer2 {
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.footer3 {
+    margin-top: 18px;
+}
+

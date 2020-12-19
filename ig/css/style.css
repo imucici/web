@@ -30,7 +30,8 @@ header {
 #iglogo {
     position: absolute;
     cursor: pointer;
-    left: 156px;
+    /* left: 156px; */
+    left: 15%;
     height: 35px;
     width: 120px;
     background-image: url("../images/iglogo.png");
@@ -47,29 +48,32 @@ header {
     height: 28px;
     width: 215px;
     border : solid 1px #dbdbdb;
-    left: 515px;
+    /* left: 515px; */
+    left: 42%;
 }
 
 
 .searchimg {
     margin-left: 78px;
-    margin-right: 4px;
     top : 1px;
     height: 15px;
     width: 15px;
     background-image: url("../images/search.jpg");
     background-position: center center;
     background-size: cover;
-    
+
 }
 
 .search_text {
     font-size: 14px;
     color: #8e8e8e;
+    
 }
 
 #search_wrap_hid, #inp {
+    
     display: none;
+    
 }
 
 
@@ -78,14 +82,14 @@ header {
     position: absolute;
     height: 30px;
     width: 140px;
-    margin-left: 540px;
-    top : 13px;
     border: none;
     background: transparent;
+    
 }
 
 #inp:focus {
     outline: none;
+    left: 44%;
 }
 
 
@@ -132,7 +136,8 @@ header {
 .home {
     position: absolute;
     cursor: pointer;
-    left: 896px;
+    /* left: 896px; */
+    left: 73%;
     height: 32px;
     width: 32px;
     background-image: url("../images/home.png");
@@ -143,7 +148,8 @@ header {
 .mes {
     position: absolute;
     cursor: pointer;
-    left: 940px;
+    /* left: 940px; */
+    left: 76%;
     height: 32px;
     width: 32px;
     background-image: url("../images/mes.png");
@@ -154,7 +160,8 @@ header {
 .compass {
     position: absolute;
     cursor: pointer;
-    left: 984px;
+    /* left: 984px; */
+    left: 79%;
     height: 32px;
     width: 32px;
     background-image: url("../images/compass.png");
@@ -165,7 +172,8 @@ header {
 .header_like {
     position: absolute;
     cursor: pointer;
-    left: 1030px;
+    /* left: 1030px; */
+    left: 82%;
     height: 30px;
     width: 30px;
     background-image: url("../images/like.png");
@@ -176,7 +184,8 @@ header {
 .self_icon {
     position: absolute;
     cursor: pointer;
-    left: 1072px;
+    /* left: 1072px; */
+    left: 85%;
     height: 30px;
     width: 30px;
     background-image: url("../images/selficon.png");
@@ -189,15 +198,14 @@ header {
 /* 左右切版設寬度%數 */
 
 .content {
+    /* border : solid 2px green; */
     position: relative;
     margin-top : 54px;
-    display: flex;/* 水平呈現 */
+    /* 水平呈現 */
+    display: flex;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px 0px 0px;
-    padding-left: 163px;
-    padding-right: 150px;
+    padding-top: 30px;
+    /* padding-right: 170px; */
     background-color: #fafafa;
 }
 
@@ -206,12 +214,16 @@ header {
 /* left */
 .left {
     /* border: solid 1px blue; */
-    width: 65%;
-    /* height: 500px; */
-    
+    left: 15%;
+    width: 46%;
+    margin-top: 115px;
 }
 
 #realistic_div {
+    position: absolute;
+    left: 15%;
+    width: 46%;
+
     background-color: white;
     border : solid 1px #dbdbdb;
     height: 118px;
@@ -221,7 +233,6 @@ header {
 }
 
 .real_wrap {
-    /* border: solid 1px blue; */
     vertical-align: middle;
     text-align:center;
     margin-right: 18px;
@@ -373,7 +384,9 @@ header {
     cursor: pointer;
     content: "...";
     top : 13px;
-    left: 583px;
+    /* left: 560px; */
+    left: 94%;
+    /* padding-right: 0%; */
     font-weight: 900;
     font-size: 20px;
 
@@ -391,7 +404,6 @@ header {
 #pic2 {
     /* border: solid 2px pink; */
     height: 350px;
-    /* height: 65%; */
     background-image: url("../images/articlepic2.png");
     background-position: center center;
     background-size: cover;    
@@ -432,7 +444,7 @@ header {
 .forward {
     border: none;
     cursor: pointer;
-    margin-right: 450px;
+    /* margin-right: 450px; */
     height: 26px;
     width: 26px;
     background-image: url("../images/forward.png");
@@ -441,10 +453,13 @@ header {
 }
 
 .receive {
+    position: absolute;
     border: none;
     cursor: pointer;
     height: 25px;
     width: 25px;
+    left: 94%;
+    
     background-image: url("../images/receive.png");
     background-position: center center;
     background-size: cover;
@@ -538,9 +553,8 @@ header {
 }
 
 .mes_wrap::after {
-    border: solid 1px red;
     position: absolute;
-    left: 570px;
+    left: 94%;
     content: " ";
     border: none;
     cursor: pointer;
@@ -589,7 +603,8 @@ header {
 
 .input_blue {
     position: absolute;
-    left: 575px;
+    /* left: 575px; */
+    left: 93%;
     font-weight: bolder;
     /* border: solid 1px red; */
     display: inline-block;
@@ -664,12 +679,10 @@ header {
 
 /* right */
 .right {
+    /* border: solid 2px red; */
     position: fixed;
-    /* border : solid 2px green; */
-    left: 782px;
+    left: 65%;
     width:  25%;
-    height: 500px;
-    margin-left: 24px;
 }
 
 /* my account */

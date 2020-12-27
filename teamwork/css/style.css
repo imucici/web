@@ -1,0 +1,571 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html,body {
+    background-color: #e9dab3;
+   
+    width : 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+}
+
+.step {
+  border : solid 2px blue;
+  margin-top : 2%;
+  margin-bottom: 2%;
+  left: 3%;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color : red;
+  display: inline-block;
+}
+
+
+
+.add_noadd_btn {
+  /* border : solid 2px blue; */
+  position: absolute;
+  top : 18%;
+  left: 35%;
+  display: flex;
+  align-items: center;
+  /* background-color: #f0e3c1; */
+}
+
+
+/* 外面方框 */
+.toggle {
+  /* 讓裡面三個div完全置中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 讓裡面三個div完全置中 */    
+  height: 100px;
+  width: 100px;
+  margin-right: 160px;
+  border-radius: 100%;
+    
+}
+
+.toggle .button {
+/*  x位移 y位移 模糊強度  擴散程度(負的縮小) */
+  box-shadow: 0px 15px 25px -4px rgba(0, 0, 0, 0.5), 0px -10px 15px -1px rgba(255, 255, 255, 0.6), 0px -3px 4px -1px rgba(0, 0, 0, 0.2) inset, 0px 0px 5px 1px rgba(255, 255, 255, 0.8) inset;
+  border-radius : 100%;
+  position: absolute;
+/*   按鈕顏色 */
+  background: #ccd0d4;
+  display: block;
+  height: 95px;
+  width: 95px;
+}
+
+.toggle .label {
+  text-align: center;
+  position: absolute;
+  font-weight: 900;
+  font-size: 44px;
+  color: black;
+  opacity : 0.4;
+  
+}
+.toggle input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    height: 80%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+}
+
+
+/* 點擊後圓圈變化 */
+/* 正下方灰色陰影__立體感, 外部上方白色陰影,內部白色陰影y:-8上移 讓圈圈內部下方白色區域比上方多,  內部上方黑色陰影 */
+.toggle input:checked ~ .button {
+   box-shadow: 0px 15px 25px -4px rgba(0, 0, 0, 0.4), 0px -10px 15px -1px rgba(255, 255, 255, 0.6), 0px -8px 25px -1px white inset, 0px 8px 20px 0 rgba(0, 0, 0, 0.2) inset, 0px 0px 5px 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+/* 點擊後符號變化 */
+.toggle input:checked ~ .label {
+  font-size: 40px;
+  color : black;
+  opacity : 0.6;
+}
+
+
+#beforefroth {
+  /* border : solid 2px red; */
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+  width: 400px;
+  height: 280px;
+  /* background-image: url("../images/beforefroth.png"); */
+  background-image: url("../images/cup1.png");
+  background-size: cover;
+  background-position: center center;
+  transition-duration: 2s;
+  
+} 
+#afterfroth {
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+  width: 400px;
+  height: 280px;
+  /* background-image: url("../images/afterfroth.png"); */
+  background-image: url("../images/cup2.png");
+  background-size: cover;
+  background-position: center center;
+  display: none;
+  transition-duration: 2s;
+  
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+/* .chocolate_bottle {
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  height: 300px;
+  background-image: url("../images/chocolate.png");
+  background-size: cover;
+  background-position: center center;
+} */
+
+.chocolate_bottle {
+  /* border : solid 2px red; */
+  cursor: pointer;
+  width: 14%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+@keyframes chocolatedrop {
+  0% {
+    top : -10px;
+  }
+  100% {
+    top : 100px;
+    opacity: 0;
+  }
+}
+
+#drop {
+  /* position: absolute; */
+  z-index: 100000;
+  width: 6px;
+  height: 30px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  animation: chocolatedrop 1s infinite linear;
+  background-color: #523112;
+  /* display: none; */
+  visibility: hidden;
+}
+
+
+#nochocolate {
+  /* border : solid 2px red; */
+  /* margin-top: -90px; */
+  margin-right: auto;
+  margin-left: auto;
+  left : 2%;
+  width: 460px;
+  height: 350px;
+  background-image: url("../images/chocolate0.png");
+  background-size: cover;
+  background-position: center center;
+  display: none;
+}
+
+#changechocolate {
+  display: flex;
+  justify-content: center;
+}
+
+
+#chocolatecup {
+  /* border : solid 2px green; */
+  left : 1%;
+  width: 23%;
+} 
+
+.degree {
+  font-size: 20px;
+  font-weight: bolder;
+  color: grey;
+}
+
+
+
+
+.fruit, .nut {
+  position: absolute;
+  top : 20%;
+  width: 3%;
+}
+
+.lemon {
+  /* border : solid 1px gray; */
+  width: 16%;
+  margin: 0px 120px 0px 120px;
+} 
+
+/* .lemon {
+  border : solid 2px red;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  height: 300px;
+  background-image: url("../images/lemon.png");
+  background-size: cover;
+  background-position: center center;
+} */
+
+#lemon_wrap {
+  display: flex;
+  align-items: center;
+  /* border: solid 2px red; */
+  justify-content: center;
+}
+
+#acid_wrap {
+  /* border : solid 1px red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#acid {
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+#acidcup {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+input[type="range"] {
+  position: absolute;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin-top : -25px;
+  width: 48%;
+  background:none;
+  outline : none;
+  
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+  width:10px;
+  height:26px;
+  background:#58ae05;
+  border-left: solid 3px green;
+  border-top: solid 2px green;
+  border-bottom: solid 2px green;
+  border-right: solid 1px green;
+  
+}
+/* 
+
+#acidcup {
+  border : solid 2px red;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  height: 300px;
+  background-image: url("../images/acidcup.png");
+  background-size: cover;
+  background-position: center center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#first_next {
+    background-color: #ab7f4d;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 45px;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    height: 45px;
+    position: fixed;
+    left : 96%;
+    top : 57%;
+    border-bottom-right-radius : 40px;
+    border-bottom-left-radius : 40px;
+    transform : rotate(90deg);
+    /* opacity: 0; */
+    display: none;
+}
+
+#second_next {
+  background-color: green;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  width: 60px;
+  height: 45px;
+  position: fixed;
+  left : 96%;
+  top : 57%;
+  border-bottom-right-radius : 40px;
+  border-bottom-left-radius : 40px;
+  transform : rotate(90deg);
+  /* opacity: 0; */
+  display: none;
+}
+
+#third_next {
+  background-color: red;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  width: 60px;
+  height: 45px;
+  position: fixed;
+  left : 96%;
+  top : 57%;
+  border-bottom-right-radius : 40px;
+  border-bottom-left-radius : 40px;
+  transform : rotate(90deg);
+  /* opacity: 0; */
+  display: none;
+}
+
+#forth_next {
+  background-color: blue;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  width: 60px;
+  height: 45px;
+  position: fixed;
+  left : 96%;
+  top : 57%;
+  border-bottom-right-radius : 40px;
+  border-bottom-left-radius : 40px;
+  transform : rotate(90deg);
+  /* opacity: 0; */
+  display: none;
+}
+
+#five_next {
+  background-color: pink;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+  width: 60px;
+  height: 45px;
+  position: fixed;
+  left : 96%;
+  top : 57%;
+  border-bottom-right-radius : 40px;
+  border-bottom-left-radius : 40px;
+  transform : rotate(90deg);
+  /* opacity: 0; */
+  display: none;
+}
+
+
+
+
+
+
+
+
+#scaleinner {
+  /* 半圓:高度為寬度一半，圓角只設上方(同高度px) */
+  margin-left : auto;
+  margin-right: auto;
+  width: 400px;
+  height: 200px;
+  /* border: 1px solid #ff4346; */
+  border-radius: 200px 200px 0 0;
+  overflow: visible;
+}
+
+#scale_ball{
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  transform: rotate(0deg);
+  border : solid 3px #17c8de;
+  background: white;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  transform-origin: 160px 160px;
+  transition: transform 2s;
+  animation: circle 3s infinite linear;
+}
+
+/* @keyframes circle{
+  0%{ transform:rotate(0deg); }
+  100%{transform:rotate(180deg);}
+} */
+
+
+#scale_pic {
+  /* 比例和軌道一樣 */
+  position: absolute;
+  display: block;
+  left: 50%;
+  /* border : solid 1px red; */
+  transform: translateX(-50%);
+  background-image: url("../images/scale.png");
+  background-size: cover;
+  background-position: center center;
+  width: 400px;
+  height: 90px;
+}
+
+
+
+#changemilk {
+  display: flex;
+  justify-content: center;
+}
+
+
+#milkcup {
+  /* border : solid 2px green; */
+  left : 1%;
+  width: 25%;
+} 
+
+
+.bitter_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#microwave {
+  margin-left: 10%;
+  width: 51%;
+  margin-right: 10%;
+}
+
+
+#button {
+  /* border : solid 2px red; */
+  position: absolute;
+  cursor: pointer;
+  top : 75%;
+  left: 61%;
+  transform: rotate(-50deg);
+  width: 3%;
+  display: none;
+}
+
+
+#coffeebean {
+  /* border: solid 1px red; */
+  cursor: pointer;
+  width: 5%;
+  
+}
+
+
+
+@keyframes wave {
+    0% {
+        transform: translateX(20px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.js"></script>
+    <title>作業內容</title>
+</head>
+<body>
+
+    <!-- step1_奶泡 -->
+    <div id="first">
+        
+    
+        <div class="step step1">Step1 | 是否加奶泡?</div>
+
+
+        <div class="add_noadd_btn">
+
+            <div class="toggle">
+                <input type="radio" name="milk_froth" onclick="pick_froth();delete_forth()">
+                <span class="button"></span>
+                <span class="label">–</span>
+            </div>
+
+            <div class="toggle">
+                <input type="radio" name="milk_froth" onclick="pick_froth();add_forth()"> 
+                <span class="button"></span>
+                <span class="label">+</span>
+            </div>
+            
+        </div>
+        
+
+        <div id='beforefroth'></div>
+        <div id="afterfroth"></div>
+        
+
+        
+        <div id="first_next" onclick="first_nextfun()">➜</div>
+
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div id="second">
+    
+        <div class="step step2">Step2 | 是否加巧克力?</div>
+    
+
+        <!-- <div id='chocolate_bottle' class="chocolate_bottle" onclick='add_chocolate()'></div> -->
+        <img src="images/chocolate.png" id="chocolate_bottle" class="chocolate_bottle" onclick='add_chocolate()'>
+        <div id='drop' class="drop"></div>
+        <div id="nochocolate"></div>
+        
+        
+
+        <div id="changechocolate">
+            <img src="images/chocolate0.png" id="chocolatecup">
+        </div>
+        
+       
+    
+    
+        <div id="second_next" onclick="second_nextfun()">➜</div>
+    
+    
+    </div>
+
+
+    <!-- step3-->
+    <div id="third">
+    
+        
+        <div class="step step3">Step3 | 請選擇酸度?</div>
+    
+
+        <img src="images/fruit.png" class="fruit">
+        <div id="lemon_wrap">
+            <div class="degree" id="degree1">明亮酸</div>
+            <!-- <div class="lemon"></div> -->
+            <img src="images/lemon.png" class="lemon">
+            <div class="degree" id="degree2">溫和酸</div>
+        </div>
+        
+
+
+        <div id="acid_wrap">
+
+            <img src="images/acid.png" id="acid">
+            <input type="range" id="acid_range" onclick="getrange()">
+
+        </div>
+        
+        <img src="images/acidcup.png" id="acidcup">
+        
+
+        <div class="test"></div>
+    
+        
+        <div id="third_next" onclick="third_nextfun()">➜</div>
+        
+    
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+   <!-- step4-->
+    <div id="forth">
+    
+        <div class="step step4">Step4 | 請選擇奶量?</div>
+
+        
+        <div id="scale_pic"></div>
+        <div id="scaleinner">
+            <div id="scale_ball" onclick="clicks++;check()"></div>
+        </div>
+       
+        <div id="changemilk">
+            <img src="images/milk1.png" id="milkcup">
+        </div>
+
+        <div class="test"></div>
+    
+        
+        <div id="forth_next" onclick="forth_nextfun()">➜</div>
+    
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <!-- step3-->
+    <div id="fifth">
+    <div class="step step5">Step5 | 請選擇苦度?</div>
+    
+        <img src="images/nut.png" class="nut">
+
+        
+    
+    
+    
+       
+    
+    
+        <!-- <div id="acidcup"></div> -->
+        <div class="bitter_wrap">
+            <img src="images/microwave1.png" id="microwave" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="images/button.png" id="button" onclick="clicks++;turn()">
+            <img id="coffeebean" src="images/coffeebean.png" draggable="true" ondragstart="drag(event)">
+        </div>
+        
+    
+        <br>
+        <br>
+    
+    
+        <div class="test"></div>
+    
+    
+        <!-- <div id="fifth_next" onclick="fifth_nextfun()">➜</div> -->
+    
+    
+    </div>
+
+    
+</body>
+</html>
